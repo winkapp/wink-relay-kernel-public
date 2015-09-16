@@ -1,0 +1,38 @@
+Kernel driver si70xx
+====================
+
+Supported chips:
+  * Silicon Laboratories Si7013, Si7020, Si7021
+    Prefix: 'si70xx'
+    Addresses scanned: I2C 0x40, 0x41
+    Datasheet: Publicly available at the Silicon Labs website
+
+Author:
+  Quentin Stephenson <Quentin.Stephenson@silabs.com>
+
+Description
+-----------
+
+This driver implements support for the Silicon Labs Si7013, Si7020 and 
+Si7021 ICs.
+
+These ICs are digital relative humidity and temperature sensors
+integrating humidity and temperature sensor elements along with an
+analog-to-digital converter, signal processing, calibration data and a
+digital I2C interface. The humidity and temperature sensors on each unit
+are factory calibrated ensuring that the devices are fully
+interchangeable with no recalibration or software changes required.
+
+These ICs are reflow solderable and offers an accurate, low-power,
+factory-calibrated digital solution ideal for measuring humidity,
+temperature and dew-point in applications ranging from HVAC/R and asset
+tracking to industrial and consumer platforms.
+
+sysfs-Interface
+---------------
+
+temp1_input     - temperature input
+temp2_input     - thermistor input (Si7013 only)
+humidity1_input - humidity input
+device_id       - device ID
+
